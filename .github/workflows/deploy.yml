@@ -1,0 +1,22 @@
+name: Deployment
+on:
+  push:
+    branches: [ prod ]
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - name: Cleanup & build
+        run: |
+          cd $HOME/homepage
+          git checkout prod
+          git stash
+          git pull origin prod --rebase
+          git stash pop
+          docker ps -a | cut -d\  -f1 | xargs docker rm -f
+          docker build --rm -t synalytica/homepage .
+      - name: Deploy
+        run: |
+          cd $HOME/homepage
+          docker run --rm -d -e DEBUG=1 -v $PWD:/app -p 9000:9000 synalytica/homepage:latest
