@@ -9,12 +9,12 @@ jobs:
     steps:
       - name: Cleanup & build
         run: |
-          cd /root/homepage
+          cd $HOME/homepage
           git checkout prod
           git pull origin prod --rebase
           docker ps -a | cut -d\  -f1 | xargs docker rm -f
           docker build --rm -t synalytica/homepage .
       - name: Deploy
         run: |
-          cd /root/homepage
+          cd $HOME/homepage
           docker run --rm -d -e DEBUG=1 -v $PWD:/app -p 9000:9000 synalytica/homepage:latest
