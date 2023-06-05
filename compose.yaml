@@ -1,0 +1,30 @@
+version: "3.9"
+services:
+  homepage:
+    build: ./homepage
+    entrypoint: ./entrypoint.sh
+    volumes:
+      - $PWD/homepage:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=$NODE_ENV
+      - DEBUG=$DEBUG
+    ports:
+      - 9000:9000  # required for hot-reload
+    networks:
+      - web_network
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - 8000:80
+    volumes:
+      - $PWD/config/nginx:/etc/nginx/conf.d/
+    depends_on:
+      - homepage
+    networks:
+      - web_network
+
+networks:
+  web_network:
+
