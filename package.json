@@ -2,11 +2,13 @@
   "name": "synalytica-home",
   "version": "0.0.1",
   "description": "Synalytica LLC landing page",
-  "productName": "Synalytica Homepage",
+  "productName": "Synalytica LLC",
   "author": "Pk13055 <Pk13055@users.noreply.github.com>",
   "private": false,
   "scripts": {
     "build": "quasar build",
+    "dev": "quasar dev",
+    "serve": "quasar server",
     "lint": "eslint --ext .js,.vue ./",
     "format": "prettier --write \"**/*.{js,vue,scss,html,md,json}\" --ignore-path .gitignore",
     "test": "echo \"No test specified\" && exit 0"

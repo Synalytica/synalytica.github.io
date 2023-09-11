@@ -12,14 +12,29 @@
 // to match your app's branding.
 // Tip: Use the "Theme Builder" on Quasar's documentation website.
 
-$primary   : #1976D2;
-$secondary : #26A69A;
-$accent    : #9C27B0;
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600&display=swap");
 
-$dark      : #1D1D1D;
-$dark-page : #121212;
+$typography-font-family: "Comfortaa", sans-serif !default;
 
-$positive  : #21BA45;
-$negative  : #C10015;
-$info      : #31CCEC;
-$warning   : #F2C037;
+$red: #ee4148;
+$orange: #f79724;
+$yellow: #f8c64f;
+$light-green: #90c06d;
+$green: #3baa8a;
+$blue: #577891;
+
+$black: #000000;
+$white: #ffffff;
+$gold: #f5b21b;
+
+$primary: $green;
+$secondary: $gold;
+$accent: $yellow;
+
+$dark: #1d1d1d;
+$dark-page: #121212;
+
+$positive: $light-green;
+$negative: $red;
+$info: $blue;
+$warning: $orange;
