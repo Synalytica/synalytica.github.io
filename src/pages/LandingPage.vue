@@ -13,10 +13,73 @@
         </q-card>
       </div>
     </div>
+    <div class="row items-center justify-around">
+      <div
+        v-for="offering in offerings"
+        class="col-md-4 col-xs-12 q-px-xs q-py-md text-center"
+        :key="offering.id"
+      >
+        <Offering :content="offering" />
+      </div>
+    </div>
   </q-page>
 </template>
 
-<script setup></script>
+<script setup>
+import Offering from "src/components/Offering.vue";
+const offerings = [
+  {
+    id: 1,
+    vertical: "one",
+    title: "Starter Up",
+    tags: ["AI", "Content Generation", "Branding", "Marketing"],
+    description:
+      "Starter Up is a SaaS platform that enables companies to generate their brand identity using AI.",
+    logo: "https://www.synalytica.com/wp-content/uploads/2021/08/starterup-logo.png",
+    url: "https://starter-up.synalytica.com",
+  },
+  {
+    id: 2,
+    vertical: "one",
+    title: "Energylicious",
+    tags: ["Energy", "Dashboard", "Analytics"],
+    description:
+      "Energylicious is a SaaS platform that enables energy companies to manage their entire business from a single platform.",
+    logo: "https://www.synalytica.com/wp-content/uploads/2021/08/energylicious-logo.png",
+    url: "https://energylicious.synalytica.com",
+  },
+  {
+    id: 3,
+    vertical: "xyz",
+    title: "FolioWiz",
+    tags: ["Finance", "Investments", "Portfolio Management"],
+    description:
+      "FolioWiz is a SaaS platform that enables investors to manage their entire portfolio from a single platform.",
+    logo: "https://www.synalytica.com/wp-content/uploads/2021/08/foliowiz-logo.png",
+    url: "https://foliowiz.synalytica.com",
+  },
+  {
+    id: 4,
+    vertical: "one",
+    title: "QuadCaffe",
+    tags: ["Education", "Data", "Analytics"],
+    description:
+      "QuadCaffe is a SaaS platform that enables colleges to manage their entire business from a single platform.",
+    logo: "https://www.synalytica.com/wp-content/uploads/2021/08/quadcaffe-logo.png",
+    url: "https://quadcaffe.synalytica.com",
+  },
+  {
+    id: 5,
+    vertical: "xyz",
+    title: "WarrVault",
+    tags: ["Consumer Services", "Blockchain", "Warranty"],
+    description:
+      "WarrVault is a SaaS platform that enables companies to manage their entire business from a single platform.",
+    logo: "https://www.synalytica.com/wp-content/uploads/2021/08/warrvault-logo.png",
+    url: "https://warrvault.synalytica.com",
+  },
+];
+</script>
 <style scoped>
 .card-rounded {
   border-radius: 10px;
