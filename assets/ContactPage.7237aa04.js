@@ -1,1 +1,0 @@
-import{Q as e}from"./QPage.b28515d5.js";import{_ as t,q as a,u as c,v as s,D as o}from"./index.732194a2.js";import"./render.b2a3333d.js";const r={},n=o("div",{class:"text-h6"},"Contact",-1);function _(f,i){return a(),c(e,{class:"flex flex-center"},{default:s(()=>[n]),_:1})}var m=t(r,[["render",_]]);export{m as default};
