@@ -10,29 +10,29 @@
         <span class="text-wrap font-weight-bold">ynalytica</span>
       </q-toolbar-title>
       <q-btn class="mobile-hide text-weight-bolder" flat to="/">
-        <q-icon name="tactic" class="q-pr-xs" />
+        <q-icon left name="mdi-graph" />
         Offerings
       </q-btn>
       <q-separator class="mobile-hide" color="white" vertical inset />
       <q-btn class="mobile-hide text-weight-bolder" flat to="/team">
-        <q-icon name="request_quote" class="q-pr-xs" />
+        <q-icon left name="mdi-crowd" />
         <span class="mobile-hide">Team</span>
       </q-btn>
       <q-btn class="mobile-hide text-weight-bolder" flat to="/board">
-        <q-icon name="contact_page" class="q-pr-xs" />
+        <q-icon left name="mdi-account-group" />
         <span class="mobile-hide">Board</span>
       </q-btn>
       <q-separator class="mobile-hide" color="white" vertical inset />
       <q-btn class="mobile-hide text-weight-bolder" flat to="/contact">
-        <q-icon name="contact_page" class="q-pr-xs" />
+        <q-icon left name="mdi-human-greeting-proximity" />
         <span class="mobile-hide">Contact</span>
       </q-btn>
       <q-toggle
         :model-value="$q.dark.mode"
         @update:model-value="() => null"
         @click="$q.dark.toggle()"
-        checked-icon="dark_mode"
-        unchecked-icon="light_mode"
+        checked-icon="mdi-brightness-4"
+        unchecked-icon="mdi-brightness-6"
         :color="$q.dark.mode ? 'black' : 'white'"
       />
     </q-toolbar>
@@ -66,14 +66,14 @@ import Footer from "src/components/Footer.vue";
   background: rgb(0, 0, 0);
   background: linear-gradient(
     225deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(238, 65, 72, 1) 12%,
-    rgba(247, 151, 36, 1) 24%,
-    rgba(248, 198, 79, 1) 36%,
-    rgba(144, 192, 109, 1) 48%,
-    rgba(59, 170, 138, 1) 60%,
-    rgba(87, 120, 145, 1) 72%,
-    rgba(0, 0, 0, 1) 100%
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(238, 65, 72, 0.8) 12%,
+    rgba(247, 151, 36, 0.8) 24%,
+    rgba(248, 198, 79, 0.8) 36%,
+    rgba(144, 192, 109, 0.8) 48%,
+    rgba(59, 170, 138, 0.8) 60%,
+    rgba(87, 120, 145, 0.8) 72%,
+    rgba(0, 0, 0, 0.9) 100%
   );
 }
 </style>
