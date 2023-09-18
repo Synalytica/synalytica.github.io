@@ -3,7 +3,7 @@
     <q-card-section horizontal>
       <q-card-section class="q-pt-md">
         <div class="text-overline text-uppercase">
-          <a href="{{ props.content.url }}" target="_blank">
+          <a :href="props.content.url" target="_blank">
             <q-icon
               name="mdi-open-in-new"
               class="text-primary"
