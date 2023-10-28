@@ -1,6 +1,14 @@
 <template>
   <q-header class="bg-nav">
     <q-toolbar>
+      <q-btn
+        class="desktop-hide"
+        flat
+        round
+        dense
+        icon="mdi-menu"
+        @click="() => (drawer = !drawer)"
+      />
       <q-toolbar-title class="text-overline text-uppercase">
         <q-img
           src="logo-light.png"
@@ -38,9 +46,44 @@
     </q-toolbar>
   </q-header>
   <Footer />
+  <q-drawer
+    v-model="drawer"
+    :width="200"
+    :breakpoint="500"
+    class="desktop-hide"
+  >
+    <q-list padding>
+      <q-item clickable v-ripple to="/">
+        <q-item-section avatar>
+          <q-icon name="mdi-graph" />
+        </q-item-section>
+        <q-item-section> Offerings </q-item-section>
+      </q-item>
+      <q-item clickable v-ripple to="/team">
+        <q-item-section avatar>
+          <q-icon name="mdi-crowd" />
+        </q-item-section>
+        <q-item-section> Team </q-item-section>
+      </q-item>
+      <q-item clickable v-ripple to="/board">
+        <q-item-section avatar>
+          <q-icon name="mdi-account-group" />
+        </q-item-section>
+        <q-item-section> Board </q-item-section>
+      </q-item>
+      <q-item clickable v-ripple to="/contact">
+        <q-item-section avatar>
+          <q-icon name="mdi-human-greeting-proximity" />
+        </q-item-section>
+        <q-item-section> Contact </q-item-section>
+      </q-item>
+    </q-list>
+  </q-drawer>
 </template>
 <script setup>
+import { ref } from "vue";
 import Footer from "src/components/Footer.vue";
+const drawer = ref(false);
 </script>
 <style scoped>
 .text-wrap {
