@@ -11,7 +11,7 @@
               size="lg"
             />
           </a>
-          Synalytica {{ props.content.vertical }}
+          Launch: {{ props.content.vertical }}
         </div>
         <div class="text-h4 q-mt-sm q-mb-lg">
           {{ props.content.title }}&trade;
@@ -50,7 +50,6 @@ const props = defineProps({
 </script>
 <style scoped>
 .q-card {
-  height: 270px;
   width: 90%;
   border-radius: 2rem;
   position: relative;
