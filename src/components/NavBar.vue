@@ -12,6 +12,7 @@
       <q-toolbar-title class="text-overline text-uppercase">
         <q-img
           src="logo-light.png"
+          no-spinner
           width="50px"
           class="q-mr-none q-pr-none oval"
         />

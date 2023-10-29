@@ -64,7 +64,7 @@
           color="white"
         />
       </a>
-      <q-img src="logo-dark.png" class="oval" width="50px" />
+      <q-img no-spinner src="logo-dark.png" class="oval" width="50px" />
     </q-toolbar>
   </q-footer>
 </template>

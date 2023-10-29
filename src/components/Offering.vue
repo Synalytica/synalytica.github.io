@@ -19,6 +19,7 @@
         <p class="q-py-md q-px-xs">
           <q-img
             :src="props.content.logo"
+            no-spinner
             height="128px"
             width="128px"
           />
