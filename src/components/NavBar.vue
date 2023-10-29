@@ -26,7 +26,7 @@
         <q-icon left name="mdi-crowd" />
         <span class="mobile-hide">Team</span>
       </q-btn>
-      <q-btn class="mobile-hide text-weight-bolder" flat to="/board">
+      <q-btn disabled class="mobile-hide text-weight-bolder" flat to="/#!">
         <q-icon left name="mdi-account-group" />
         <span class="mobile-hide">Board</span>
       </q-btn>
@@ -65,7 +65,7 @@
         </q-item-section>
         <q-item-section> Team </q-item-section>
       </q-item>
-      <q-item clickable v-ripple to="/board">
+      <q-item disabled clickable v-ripple to="/#!">
         <q-item-section avatar>
           <q-icon name="mdi-account-group" />
         </q-item-section>
