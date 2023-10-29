@@ -16,6 +16,13 @@
         <div class="text-h4 q-mt-sm q-mb-lg">
           {{ props.content.title }}&trade;
         </div>
+        <p class="q-py-md q-px-xs">
+          <q-img
+            :src="props.content.logo"
+            height="128px"
+            width="128px"
+          />
+        </p>
         <div class="text-subtitle text-grey">
           {{ props.content.description }}
         </div>
@@ -30,9 +37,6 @@
           </q-chip>
         </p>
       </q-card-section>
-      <!-- <q-card-section class="col flex flex-center">
-        <q-img class="rounded-borders" :src="props.content.logo" />
-      </q-card-section> -->
     </q-card-section>
   </q-card>
 </template>

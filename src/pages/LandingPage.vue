@@ -59,7 +59,7 @@ const offerings = [
     tags: ["Branding", "Marketing", "Business"],
     description:
       "Build brand identities with a blend of intelligence, automation, and creativity - for content creators, contractors and businesses seeking creative efficiency",
-    logo: null,
+    logo: 'logos/starter-up.png',
     url: "https://starter-up.synalytica.com",
   },
   {
@@ -69,7 +69,7 @@ const offerings = [
     tags: ["Energy", "Utilities", "Sustainability"],
     description:
       "Analyze and optimize energy costs and consumption - for residential energy consumers seeking efficiency and savings",
-    logo: null,
+    logo: 'logos/energylicious.png',
     url: "https://energylicious.synalytica.com",
   },
   // {
