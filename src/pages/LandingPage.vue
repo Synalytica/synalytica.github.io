@@ -9,13 +9,17 @@
               id="hero-text"
             ></h4>
             <q-banner dense rounded class="text-subtitle">
-              Our mission is to establish self-sustaining, autonomous ventures
-              for each product by catalyzing innovation, capitalizing on our
-              expertise and resources, and harnessing a robust network of
-              investors, mentors, and advisors.
+              Our mission is to establish self-sustaining ventures through
+              shared resources and expertise, both through our internal team, as
+              well as from a network of seasoned investors and expert advisors
             </q-banner>
           </q-card-section>
         </q-card>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col q-my-xl">
+        <q-separator inset />
       </div>
     </div>
     <div class="row items-center justify-around">
@@ -33,7 +37,7 @@
 <script setup>
 import { onMounted } from "vue";
 import Offering from "src/components/Offering.vue";
-const heroText = `A "Startup Studio" developing and nurturing tech-driven products and startup ideas with a unique emphasis on AI, Big Data, and Blockchain technologies`;
+const heroText = `A "Startup Studio" catalyzing ideas  using ai and big data to solve real-world shortcomings`;
 const waitForMs = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 const typeSentence = async (sentence, eleRef, delay = 30) => {
   const heroEle = document.getElementById("hero-text");
@@ -54,7 +58,7 @@ const offerings = [
     title: "Starter Up",
     tags: ["Branding", "Marketing", "Business"],
     description:
-      "An innovative AI-powered platform for brand identity development, offering comprehensive automation, personalized branding assets, and greater creative efficiency for content creators, small businesses, and startups.",
+      "Build brand identities with a blend of intelligence, automation, and creativity - for content creators, contractors and businesses seeking creative efficiency",
     logo: null,
     url: "https://starter-up.synalytica.com",
   },
@@ -64,40 +68,40 @@ const offerings = [
     title: "Energylicious",
     tags: ["Energy", "Utilities", "Sustainability"],
     description:
-      "A personalized AI-powered platform for energy management, enabling residential consumers to understand, analyze, predict, and optimize their energy consumption and costs.",
+      "Analyze and optimize energy costs and consumption - for residential energy consumers seeking efficiency and savings",
     logo: null,
     url: "https://energylicious.synalytica.com",
   },
-  {
-    id: 4,
-    vertical: "Q4 2024",
-    title: "FolioWiz",
-    tags: ["Fintech", "Finance", "Investments"],
-    description:
-      "A sophisticated AI-driven stock portfolio management platform, enabling optimal and automated investment decisions.",
-    logo: null,
-    url: "https://foliowiz.synalytica.com",
-  },
+  // {
+  //   id: 4,
+  //   vertical: "Q4 2024",
+  //   title: "FolioWiz",
+  //   tags: ["Fintech", "Finance", "Investments"],
+  //   description:
+  //     "A sophisticated AI-driven stock portfolio management platform, enabling optimal and automated investment decisions.",
+  //   logo: null,
+  //   url: "https://foliowiz.synalytica.com",
+  // },
   {
     id: 3,
     vertical: "Q2 2024",
     title: "QuadCaffe",
     tags: ["Education", "Analytics", "Collegiate"],
     description:
-      "A transformative big data driven platform empowering high school students with data-driven insights to aid their college research and selection process.",
+      "Simplify college research and selection using big data - for high school students",
     logo: null,
     url: "https://quadcaffe.synalytica.com",
   },
-  {
-    id: 5,
-    vertical: "Q4 2024",
-    title: "WarrVault",
-    tags: ["Fintech", "Blockchain", "Insurance"],
-    description:
-      "A blockchain-based digital inventory management platform for product owners, manufacturers, and consumers to manage and maintain warranties and service contracts.",
-    logo: null,
-    url: "https://warrvault.synalytica.com",
-  },
+  // {
+  //   id: 5,
+  //   vertical: "Q4 2024",
+  //   title: "WarrVault",
+  //   tags: ["Fintech", "Blockchain", "Insurance"],
+  //   description:
+  //     "A blockchain-based digital inventory management platform for product owners, manufacturers, and consumers to manage and maintain warranties and service contracts.",
+  //   logo: null,
+  //   url: "https://warrvault.synalytica.com",
+  // },
 ];
 </script>
 <style scoped>

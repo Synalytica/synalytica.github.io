@@ -11,7 +11,7 @@
     <div class="row flex-center q-mb-xl">
       <!-- founders -->
       <div class="col-xs-12 col-md-auto q-mr-lg">
-        <q-card class="founding-member">
+        <q-card flat bordered class="founding-member">
           <q-img src="team/mahesh.png">
             <div class="absolute-bottom text-left name-header">
               <div class="text-h6">Mahesh S</div>
@@ -19,7 +19,7 @@
             </div>
           </q-img>
           <q-card-actions class="text-right text-uppercase text-overline">
-            <span class="text-body2">CEO</span>
+            <span class="text-body2">Visionary Vortex</span>
             <q-space />
             <q-btn flat icon="mdi-linkedin" />
             <q-btn flat icon="mdi-email" />
@@ -27,7 +27,7 @@
         </q-card>
       </div>
       <div class="col-xs-12 col-md-auto q-ml-lg">
-        <q-card class="founding-member">
+        <q-card flat bordered class="founding-member">
           <q-img src="team/pratik.png">
             <div class="absolute-bottom text-left name-header">
               <div class="text-h6">Pratik K</div>
@@ -35,7 +35,7 @@
             </div>
           </q-img>
           <q-card-actions class="text-right text-uppercase text-overline">
-            <span class="text-body2">CTO</span>
+            <span class="text-body2">Tech Shaman</span>
             <q-space />
             <q-btn flat icon="mdi-linkedin" />
             <q-btn flat icon="mdi-github" />
@@ -46,7 +46,7 @@
     <div class="row flex-center q-mb-lg">
       <!-- core team -->
       <div class="col-xs-12 col-md-auto q-mr-lg">
-        <q-card class="core-member">
+        <q-card flat bordered class="core-member">
           <q-img src="team/sanjay.png">
             <div class="absolute-bottom text-right name-header">
               <div class="text-h6">Sanjay K</div>
@@ -54,12 +54,12 @@
             </div>
           </q-img>
           <q-card-actions class="text-overline text-uppercase">
-            Systems Architect
+            Systems Sorcerer
           </q-card-actions>
         </q-card>
       </div>
       <div class="col-xs-12 col-md-auto q-ml-lg">
-        <q-card class="core-member">
+        <q-card flat bordered class="core-member">
           <q-img src="team/gurkirat.png">
             <div class="absolute-bottom text-right name-header">
               <div class="text-h6">Gurkirat S</div>
@@ -67,7 +67,7 @@
             </div>
           </q-img>
           <q-card-actions class="text-overline text-uppercase">
-            Full-Stack Engineer
+            Stack Whisperer
           </q-card-actions>
         </q-card>
       </div>
@@ -75,7 +75,7 @@
     <div class="row flex-center q-mb-md">
       <!-- team -->
       <div class="col-xs-12 col-md-auto q-mr-lg">
-        <q-card class="team-member">
+        <q-card flat bordered class="team-member">
           <q-img src="team/sadiq.png">
             <div class="absolute-bottom text-right name-header">
               <div class="text-h6">Sadiq A</div>
@@ -83,12 +83,12 @@
             </div>
           </q-img>
           <q-card-actions class="text-overline text-uppercase">
-            AI Engineer
+            AI Alchemist
           </q-card-actions>
         </q-card>
       </div>
       <div class="col-xs-12 col-md-auto q-mx-lg">
-        <q-card class="team-member">
+        <q-card flat bordered class="team-member">
           <!-- <q-img src="team/samruddhi.png"> -->
           <q-img src="team-woman.jpg">
             <div class="absolute-bottom text-right name-header">
@@ -97,12 +97,12 @@
             </div>
           </q-img>
           <q-card-actions class="text-overline text-uppercase">
-            Designer
+            Pixel Picasso
           </q-card-actions>
         </q-card>
       </div>
       <div class="col-xs-12 col-md-auto q-ml-lg">
-        <q-card class="team-member">
+        <q-card flat bordered class="team-member">
           <!-- <q-img src="team/shamees.png"> -->
           <q-img src="team-man.jpg">
             <div class="absolute-bottom text-right name-header">
@@ -111,14 +111,14 @@
             </div>
           </q-img>
           <q-card-actions class="text-overline text-uppercase">
-            Full-Stack Engineer
+            Code Conjurer
           </q-card-actions>
         </q-card>
       </div>
     </div>
     <div class="row flex-center q-mb-sm">
       <div class="col xs-12 col-md-auto q-mr-lg">
-        <q-card class="intern-member">
+        <q-card flat bordered class="intern-member">
           <q-img src="team/noel.png">
             <div class="absolute-bottom text-right name-header">
               <div class="text-h6">Noel J</div>
@@ -126,12 +126,12 @@
             </div>
           </q-img>
           <q-card-actions class="text-overline text-uppercase">
-            Software Engineer
+            Application Apprentice
           </q-card-actions>
         </q-card>
       </div>
       <div class="col xs-12 col-md-auto q-ml-lg">
-        <q-card class="intern-member">
+        <q-card flat bordered class="intern-member">
           <q-img src="team-man.jpg">
             <!-- <q-img src="team/nikhil.png"> -->
             <div class="absolute-bottom text-right name-header">
@@ -140,7 +140,7 @@
             </div>
           </q-img>
           <q-card-actions class="text-overline text-uppercase">
-            Software Engineer
+            Application Apprentice
           </q-card-actions>
         </q-card>
       </div>
