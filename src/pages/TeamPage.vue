@@ -168,4 +168,46 @@
   border-radius: 1rem;
   width: 256px;
 }
+.q-card {
+  transition: box-shadow 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+
+.q-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px 10px rgba(39, 53, 124, 0.4);
+}
+
+.q-card:before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  opacity: 0;
+  border-radius: 1.7rem;
+  transition: opacity 0.3s ease-in-out;
+  z-index: -1;
+}
+
+.q-card:hover:before {
+  opacity: 1;
+}
+
+.q-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(ellipse at center, #27357c 0%, #cc2323 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.q-card:hover .q-card-overlay {
+  opacity: 1;
+}
 </style>
