@@ -69,7 +69,7 @@
             </div>
           </q-img>
           <q-card-actions class="text-overline text-uppercase">
-            Systems Sorcerer
+            <span class="text-body2"> Systems Sorcerer </span>
           </q-card-actions>
         </q-card>
       </div>
@@ -82,7 +82,7 @@
             </div>
           </q-img>
           <q-card-actions class="text-overline text-uppercase">
-            Stack Whisperer
+            <span class="text-body2">Stack Whisperer</span>
           </q-card-actions>
         </q-card>
       </div>
@@ -98,7 +98,7 @@
             </div>
           </q-img>
           <q-card-actions class="text-overline text-uppercase">
-            AI Alchemist
+            <span class="text-body2"> AI Alchemist </span>
           </q-card-actions>
         </q-card>
       </div>
@@ -112,13 +112,6 @@
           </q-img>
           <q-card-actions class="text-overline text-uppercase">
             <span class="text-body2">Pixel Picasso</span>
-            <q-space />
-            <q-btn
-              flat
-              icon="mdi-creative-commons"
-              href="https://www.behance.net/samruddhisatav"
-              target="_blank"
-            />
           </q-card-actions>
         </q-card>
       </div>
@@ -131,7 +124,7 @@
             </div>
           </q-img>
           <q-card-actions class="text-overline text-uppercase">
-            Scrum Synchronizer
+            <span class="text-body2">Scrum Synchronizer</span>
           </q-card-actions>
         </q-card>
       </div>
@@ -145,7 +138,7 @@
             </div>
           </q-img>
           <q-card-actions class="text-overline text-uppercase">
-            Code Conjurer
+            <span class="text-body2"> Code Conjurer </span>
           </q-card-actions>
         </q-card>
       </div>
@@ -160,7 +153,7 @@
             </div>
           </q-img>
           <q-card-actions class="text-overline text-uppercase">
-            Application Apprentice
+            <span class="text-body2"> Application Apprentice </span>
           </q-card-actions>
         </q-card>
       </div>
@@ -173,7 +166,7 @@
             </div>
           </q-img>
           <q-card-actions class="text-overline text-uppercase">
-            Application Apprentice
+            <span class="text-body2"> Application Apprentice </span>
           </q-card-actions>
         </q-card>
       </div>
