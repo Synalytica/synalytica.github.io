@@ -58,7 +58,7 @@ const offerings = [
     title: "Starter Up",
     tags: ["Branding", "Marketing", "Business"],
     description:
-      "Build brand identities with a blend of intelligence, automation, and creativity - for content creators, contractors and businesses seeking creative efficiency",
+      "Build brand identities with a blend of intelligence, automation, and creativity - for content creators, consultants and businesses seeking creative efficiency",
     logo: 'logos/starter-up.png',
     url: "https://starter-up.synalytica.com",
   },

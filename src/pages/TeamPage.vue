@@ -21,8 +21,13 @@
           <q-card-actions class="text-right text-uppercase text-overline">
             <span class="text-body2">Visionary Vortex</span>
             <q-space />
-            <q-btn flat icon="mdi-linkedin" />
-            <q-btn flat icon="mdi-email" />
+            <q-btn
+              flat
+              icon="mdi-linkedin"
+              href="https://www.linkedin.com/in/mkayes/"
+              target="_blank"
+            />
+            <q-btn flat icon="mdi-email" href="mailto:synalytica@gmail.com" />
           </q-card-actions>
         </q-card>
       </div>
@@ -37,8 +42,18 @@
           <q-card-actions class="text-right text-uppercase text-overline">
             <span class="text-body2">Tech Shaman</span>
             <q-space />
-            <q-btn flat icon="mdi-linkedin" />
-            <q-btn flat icon="mdi-github" />
+            <q-btn
+              flat
+              icon="mdi-linkedin"
+              href="https://www.linkedin.com/in/pk13055/"
+              target="_blank"
+            />
+            <q-btn
+              flat
+              icon="mdi-github"
+              href="https://github.com/pk13055/"
+              target="_blank"
+            />
           </q-card-actions>
         </q-card>
       </div>
@@ -89,22 +104,41 @@
       </div>
       <div class="col-xs-12 col-md-auto q-mx-lg">
         <q-card flat bordered class="team-member">
-          <!-- <q-img src="team/samruddhi.png"> -->
-          <q-img src="team-woman.jpg">
+          <q-img src="team/samruddhi.png">
             <div class="absolute-bottom text-right name-header">
               <div class="text-h6">Samruddhi S</div>
               <div class="text-overline text-uppercase">UI/UX</div>
             </div>
           </q-img>
           <q-card-actions class="text-overline text-uppercase">
-            Pixel Picasso
+            <span class="text-body2">Pixel Picasso</span>
+            <q-space />
+            <q-btn
+              flat
+              icon="mdi-creative-commons"
+              href="https://www.behance.net/samruddhisatav"
+              target="_blank"
+            />
           </q-card-actions>
         </q-card>
       </div>
+      <div class="col-xs-12 col-md-auto q-mx-lg">
+        <q-card flat bordered class="team-member">
+          <q-img src="team/jyoti.png">
+            <div class="absolute-bottom text-right name-header">
+              <div class="text-h6">Jyoti M</div>
+              <div class="text-overline text-uppercase">Engg. Team</div>
+            </div>
+          </q-img>
+          <q-card-actions class="text-overline text-uppercase">
+            Scrum Synchronizer
+          </q-card-actions>
+        </q-card>
+      </div>
+
       <div class="col-xs-12 col-md-auto q-ml-lg">
         <q-card flat bordered class="team-member">
-          <!-- <q-img src="team/shamees.png"> -->
-          <q-img src="team-man.jpg">
+          <q-img src="team/shamees.png">
             <div class="absolute-bottom text-right name-header">
               <div class="text-h6">Shamees R</div>
               <div class="text-overline text-uppercase">Engg. Team</div>
@@ -132,8 +166,7 @@
       </div>
       <div class="col xs-12 col-md-auto q-ml-lg">
         <q-card flat bordered class="intern-member">
-          <q-img src="team-man.jpg">
-            <!-- <q-img src="team/nikhil.png"> -->
+          <q-img src="team/nikhil.png">
             <div class="absolute-bottom text-right name-header">
               <div class="text-h6">Nikhil V</div>
               <div class="text-overline text-uppercase">Intern</div>
