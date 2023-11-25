@@ -89,7 +89,7 @@ const offerings = [
     tags: ["Education", "Analytics", "Collegiate"],
     description:
       "Simplify college research and selection using big data - for high school students",
-    logo: null,
+    logo: 'logos/quadcaffe.png',
     url: "https://quadcaffe.synalytica.com",
   },
   // {
