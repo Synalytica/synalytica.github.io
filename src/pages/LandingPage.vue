@@ -53,38 +53,28 @@ const typeSentence = async (sentence, eleRef, delay = 30) => {
 onMounted(async () => await typeSentence(heroText));
 const offerings = [
   {
-    id: 1,
-    vertical: "Q4 2023",
-    title: "Starter Up",
-    tags: ["Branding", "Marketing", "Business"],
-    description:
-      "Build brand identities with a blend of intelligence, automation, and creativity - for content creators, consultants and businesses seeking creative efficiency",
-    logo: 'logos/starter-up.png',
-    url: "https://starter-up.synalytica.com",
-  },
-  {
     id: 2,
-    vertical: "Q4 2023",
+    vertical: "Q2 24'",
     title: "Energylicious",
     tags: ["Energy", "Utilities", "Sustainability"],
     description:
       "Analyze and optimize energy costs and consumption - for residential energy consumers seeking efficiency and savings",
     logo: 'logos/energylicious.png',
-    url: "https://energylicious.synalytica.com",
+    url: "https://happyjoule.synalytica.com/home",
   },
-  // {
-  //   id: 4,
-  //   vertical: "Q4 2024",
-  //   title: "FolioWiz",
-  //   tags: ["Fintech", "Finance", "Investments"],
-  //   description:
-  //     "A sophisticated AI-driven stock portfolio management platform, enabling optimal and automated investment decisions.",
-  //   logo: null,
-  //   url: "https://foliowiz.synalytica.com",
-  // },
+   {
+     id: 4,
+     vertical: "Q4 24'",
+     title: "FolioWiz",
+     tags: ["Fintech", "Finance", "Investments"],
+     description:
+       "A sophisticated AI-driven stock portfolio management platform, enabling optimal and automated investment decisions.",
+     logo: 'logos/foliowiz.png',
+     url: "https://foliowiz.synalytica.com",
+   },
   {
     id: 3,
-    vertical: "Q2 2024",
+    vertical: "Q3 24'",
     title: "QuadCaffe",
     tags: ["Education", "Analytics", "Collegiate"],
     description:
