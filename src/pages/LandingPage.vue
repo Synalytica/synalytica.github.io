@@ -1,6 +1,6 @@
 <template>
   <q-page padding>
-    <div class="row">
+    <div class="row items-center justify-around">
       <div class="col">
         <q-card flat class="q-pa-md card-rounded text-center">
           <q-card-section>
@@ -8,11 +8,11 @@
               class="text-h4 text-overline text-uppercase text-center text-weight-bold grad-text"
               id="hero-text"
             ></h4>
-            <q-banner dense rounded class="text-subtitle">
+            <!-- <q-banner dense rounded class="text-subtitle">
               Our mission is to establish self-sustaining ventures through
               shared resources and expertise, both through our internal team, as
               well as from a network of seasoned investors and expert advisors
-            </q-banner>
+            </q-banner> -->
           </q-card-section>
         </q-card>
       </div>
@@ -22,10 +22,10 @@
         <q-separator inset />
       </div>
     </div>
-    <div class="row items-center justify-around">
+    <div class="row items-center justify-between">
       <div
         v-for="offering in offerings.sort((a, b) => a.id - b.id)"
-        class="col-md-4 col-xs-12 q-px-xs q-py-md flex-center text-center"
+        class="col-md-4 col-sm-12 text-center"
         :key="offering.id"
       >
         <Offering :content="offering" />
@@ -54,32 +54,32 @@ onMounted(async () => await typeSentence(heroText));
 const offerings = [
   {
     id: 2,
-    vertical: "Q2 24'",
+    vertical: "Q2 2024",
     title: "Energylicious",
-    tags: ["Energy", "Utilities", "Sustainability"],
+    tags: ["Energy", "Climate Tech", "Sustainability"],
     description:
       "Analyze and optimize energy costs and consumption - for residential energy consumers seeking efficiency and savings",
-    logo: 'logos/energylicious.png',
+    logo: "logos/energylicious.png",
     url: "https://happyjoule.synalytica.com/home",
   },
-   {
-     id: 4,
-     vertical: "Q4 24'",
-     title: "FolioWiz",
-     tags: ["Fintech", "Finance", "Investments"],
-     description:
-       "A sophisticated AI-driven stock portfolio management platform, enabling optimal and automated investment decisions.",
-     logo: 'logos/foliowiz.png',
-     url: "https://foliowiz.synalytica.com",
-   },
+  {
+    id: 4,
+    vertical: "Q4 2024",
+    title: "FolioWiz",
+    tags: ["Finance", "Fintech", "Investments"],
+    description:
+      "A sophisticated AI-driven stock portfolio management platform, enabling optimal and automated investment decisions.",
+    logo: "logos/foliowiz.png",
+    url: "https://foliowiz.synalytica.com",
+  },
   {
     id: 3,
-    vertical: "Q3 24'",
+    vertical: "Q3 2024",
     title: "QuadCaffe",
-    tags: ["Education", "Analytics", "Collegiate"],
+    tags: ["Education", "EdTech", "Collegiate"],
     description:
       "Simplify college research and selection using big data - for high school students",
-    logo: 'logos/quadcaffe.png',
+    logo: "logos/quadcaffe.png",
     url: "https://quadcaffe.synalytica.com",
   },
   // {

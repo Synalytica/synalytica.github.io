@@ -1,7 +1,7 @@
 <template>
   <q-card flat bordered :class="$q.dark.mode ? '' : 'bg-grey-1'">
     <q-card-section horizontal>
-      <q-card-section class="q-pt-md">
+      <q-card-section>
         <div class="text-overline text-uppercase">
           <a :href="props.content.url" target="_blank">
             <q-icon
@@ -13,15 +13,14 @@
           </a>
           Launch: {{ props.content.vertical }}
         </div>
-        <div class="text-h4 q-mt-sm q-mb-lg">
-          {{ props.content.title }}&trade;
-        </div>
-        <p class="q-py-md q-px-xs">
+        <div class="text-h4">{{ props.content.title }}&trade;</div>
+        <p class="q-my-lg text-center">
           <q-img
             :src="props.content.logo"
             no-spinner
-            height="128px"
-            width="128px"
+            height="200px"
+            width="200px"
+            fit="contain"
           />
         </p>
         <div class="text-subtitle text-grey">
