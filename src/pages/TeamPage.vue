@@ -157,20 +157,6 @@
           </q-card-actions>
         </q-card>
       </div>
-      <div class="col xs-12 col-md-auto q-mx-md">
-        <q-card flat bordered class="intern-member">
-          <q-img src="team/christa.png">
-            <div class="absolute-bottom text-right name-header">
-              <div class="text-h6">Christa L</div>
-              <div class="text-overline text-uppercase">Intern</div>
-            </div>
-          </q-img>
-          <q-card-actions class="text-overline text-uppercase">
-            <span class="text-body2"> AI Apprentice </span>
-          </q-card-actions>
-        </q-card>
-      </div>
-
       <div class="col xs-12 col-md-auto q-ml-md">
         <q-card flat bordered class="intern-member">
           <q-img src="team/nikhil.png">
