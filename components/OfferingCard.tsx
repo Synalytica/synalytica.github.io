@@ -10,6 +10,7 @@ import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { getAssetPath } from "@/lib/utils";
 
 // Define the type for the offering content
 export type Offering = {
@@ -65,7 +66,7 @@ const OfferingCard: React.FC<OfferingCardProps> = ({ offering }) => {
       <CardContent className="flex flex-col flex-grow items-center text-center">
         <div className="relative h-48 w-48 mb-4">
           <Image
-            src={`/${offering.logo}`}
+            src={getAssetPath(offering.logo)}
             alt={`${offering.title} logo`}
             fill
             style={{ objectFit: "contain" }}

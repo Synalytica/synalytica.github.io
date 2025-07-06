@@ -7,6 +7,8 @@ import { Briefcase, Mail, Menu, Moon, Orbit, Sun, Users } from "lucide-react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
+import React from "react";
+import { getAssetPath } from "@/lib/utils";
 
 const NavBar = () => {
   const { theme, setTheme } = useTheme();
@@ -35,8 +37,8 @@ const NavBar = () => {
         <div className="mr-4 hidden md:flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <Image
-              src="/logo-light.png"
-              alt="Synalytica"
+              src={getAssetPath("logo-light.png")}
+              alt="Synalytica Logo"
               width={40}
               height={40}
               className="rounded-full"
@@ -72,8 +74,8 @@ const NavBar = () => {
                     className="flex items-center gap-2 text-lg font-semibold"
                   >
                     <Image
-                      src="/logo-light.png"
-                      alt="Synalytica"
+                      src={getAssetPath("logo-light.png")}
+                      alt="Synalytica Logo"
                       width={30}
                       height={30}
                       className="rounded-full"

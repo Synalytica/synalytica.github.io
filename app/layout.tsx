@@ -32,12 +32,14 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 export const metadata: Metadata = {
   title: "Synalytica™ LLC",
   description:
     'A "Startup Studio" catalyzing ideas using AI and big data to solve real-world shortcomings',
   icons: {
-    icon: "/logo-dark.png",
+    icon: `${basePath}/logo-dark.png`,
   },
 };
 

@@ -19,7 +19,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: ~/.bun/install/cache
-          key: ${{ runner.os }}-bun-${{ hashFiles('**/bun.lockb') }}
+          key: ${{ runner.os }}-bun-${{ hashFiles('**/bun.lock') }}
           restore-keys: |
             ${{ runner.os }}-bun-
 
@@ -28,9 +28,16 @@ jobs:
 
       - name: Build
         run: bun run build
+        env:
+          CI: true
+          NODE_ENV: production
+
+      - name: Create .nojekyll file
+        run: touch out/.nojekyll
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: out
           token: ${{ secrets.GITHUB_TOKEN }}
+          clean: true

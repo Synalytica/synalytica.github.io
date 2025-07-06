@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { Button } from "./ui/button";
+import { getAssetPath } from "@/lib/utils";
 
 export type TeamMember = {
   name: string;
@@ -26,7 +27,7 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ member }) => {
     <Card className="w-full max-w-sm rounded-2xl overflow-hidden transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
       <div className="relative">
         <Image
-          src={`/${member.image}`}
+          src={getAssetPath(member.image)}
           alt={`Photo of ${member.name}`}
           width={420}
           height={420}
