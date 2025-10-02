@@ -42,9 +42,9 @@ const getGradientClass = (title: string) => {
 
 const OfferingCard: React.FC<OfferingCardProps> = ({ offering }) => {
   return (
-    <Card className="flex flex-col h-full transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
+    <Card className="flex flex-col h-full transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl bg-white/10 dark:bg-black/10 backdrop-blur-md border-white/20 dark:border-white/10 shadow-lg">
       <CardHeader className="text-center">
-        <div className="text-xs uppercase text-muted-foreground">
+        <div className="text-xs uppercase text-foreground/80 font-medium">
           Launch: {offering.vertical}
           <Link
             href={offering.url}
@@ -73,12 +73,16 @@ const OfferingCard: React.FC<OfferingCardProps> = ({ offering }) => {
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
-        <CardDescription className="flex-grow">
+        <CardDescription className="flex-grow text-foreground/90 font-medium">
           {offering.description}
         </CardDescription>
         <div className="mt-4 flex flex-wrap justify-center gap-2">
           {offering.tags.map((tag) => (
-            <Badge key={tag} variant="outline">
+            <Badge
+              key={tag}
+              variant="outline"
+              className="bg-white/20 dark:bg-black/20 backdrop-blur-sm border-white/30 dark:border-white/20 text-foreground/90"
+            >
               {tag}
             </Badge>
           ))}

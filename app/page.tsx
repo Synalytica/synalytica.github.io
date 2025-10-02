@@ -1,5 +1,8 @@
+"use client";
+
 import OfferingCard, { Offering } from "@/components/OfferingCard";
 import TypewriterText from "@/components/TypewriterText";
+import { motion } from "framer-motion";
 
 const offerings: Offering[] = [
   {
@@ -34,12 +37,57 @@ const offerings: Offering[] = [
   },
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 30, scale: 0.9 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: {
+      type: "spring",
+      stiffness: 100,
+      damping: 12,
+      duration: 0.6,
+    },
+  },
+};
+
+const heroVariants = {
+  hidden: { opacity: 0, y: -30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      type: "spring",
+      stiffness: 80,
+      damping: 15,
+      duration: 0.8,
+    },
+  },
+};
+
 export default function Home() {
   const heroText = `A "Startup Studio" catalyzing ideas using AI and big data to solve real-world shortcomings`;
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <section className="text-center my-12">
+      <motion.section
+        className="text-center my-12 mt-24"
+        initial="hidden"
+        animate="visible"
+        variants={heroVariants}
+      >
         <h1
           className="text-4xl md:text-6xl font-extrabold tracking-tight lg:text-7xl bg-gradient-to-r from-red-500 via-yellow-500 via-green-500 via-purple-500 to-black bg-clip-text text-transparent animated-gradient pb-4"
           style={{
@@ -49,17 +97,23 @@ export default function Home() {
         >
           <TypewriterText text={heroText} speed={25} />
         </h1>
-      </section>
+      </motion.section>
 
-      <section>
+      <motion.section
+        initial="hidden"
+        animate="visible"
+        variants={containerVariants}
+      >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {offerings
             .sort((a, b) => a.id - b.id)
             .map((offering) => (
-              <OfferingCard key={offering.id} offering={offering} />
+              <motion.div key={offering.id} variants={itemVariants}>
+                <OfferingCard offering={offering} />
+              </motion.div>
             ))}
         </div>
-      </section>
+      </motion.section>
     </div>
   );
 }
