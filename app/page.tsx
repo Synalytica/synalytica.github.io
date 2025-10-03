@@ -7,17 +7,16 @@ import { motion } from "framer-motion";
 const offerings: Offering[] = [
   {
     id: 2,
-    vertical: "Q3 2025",
+    vertical: "Q4 2025",
     title: "QuadCaffe",
     tags: ["Education", "EdTech", "Collegiate"],
-    description:
-      "Simplify college research and selection using big data - for high school students",
+    description: "Personalized college fit. Human-first. AI-smart.",
     logo: "logos/quadcaffe.png",
     url: "https://quadcaffe.synalytica.com",
   },
   {
     id: 3,
-    vertical: "Q4 2025",
+    vertical: "Q1 2026",
     title: "Energylicious",
     tags: ["Energy", "Climate Tech", "Sustainability"],
     description:
@@ -27,7 +26,7 @@ const offerings: Offering[] = [
   },
   {
     id: 4,
-    vertical: "Q4 2024",
+    vertical: "Q2 2026",
     title: "FolioWiz",
     tags: ["Finance", "Fintech", "Investments"],
     description:
