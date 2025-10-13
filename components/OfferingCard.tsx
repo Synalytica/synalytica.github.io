@@ -35,6 +35,8 @@ const getGradientClass = (title: string) => {
       return "from-[#cc2323] to-[#1a5eb3]";
     case "FolioWiz":
       return "from-[#003300] to-[#a6ff8a]";
+    case "NIshtAI Labs":
+      return "from-[#6b7280] to-[#14b8a6]";
     default:
       return "from-foreground to-foreground";
   }
@@ -56,7 +58,7 @@ const OfferingCard: React.FC<OfferingCardProps> = ({ offering }) => {
           </Link>
         </div>
         <CardTitle
-          className={`text-3xl font-bold bg-gradient-to-r ${getGradientClass(
+          className={`text-2xl font-bold bg-gradient-to-r ${getGradientClass(
             offering.title
           )} bg-clip-text text-transparent`}
         >
@@ -64,7 +66,7 @@ const OfferingCard: React.FC<OfferingCardProps> = ({ offering }) => {
         </CardTitle>
       </CardHeader>
       <CardContent className="flex flex-col flex-grow items-center text-center">
-        <div className="relative h-48 w-48 mb-4">
+        <div className="relative h-32 w-32 mb-4">
           <Image
             src={getAssetPath(offering.logo)}
             alt={`${offering.title} logo`}

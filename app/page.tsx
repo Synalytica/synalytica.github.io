@@ -34,6 +34,16 @@ const offerings: Offering[] = [
     logo: "logos/foliowiz.png",
     url: "https://foliowiz.synalytica.com",
   },
+  {
+    id: 5,
+    vertical: "Q3 2025",
+    title: "NIshtAI Labs",
+    tags: ["AI", "ML", "Consulting", "Automation"],
+    description:
+      "Human-first AI innovation — where Natural Intelligence guides Artificial Intelligence to amplify judgment, strategy, and scale.",
+    logo: "logos/nishtai.png",
+    url: "#!",
+  },
 ];
 
 const containerVariants = {
@@ -103,7 +113,7 @@ export default function Home() {
         animate="visible"
         variants={containerVariants}
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {offerings
             .sort((a, b) => a.id - b.id)
             .map((offering) => (
