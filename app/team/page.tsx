@@ -21,6 +21,7 @@ const teamMembers: TeamMember[] = [
     quirkyTitle: "Tech Shaman",
     image: "team/pratik.png",
     links: {
+      website: "https://pk13055.com",
       linkedin: "https://www.linkedin.com/in/pk13055/",
       github: "https://github.com/pk13055/",
     },

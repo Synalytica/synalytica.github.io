@@ -1,5 +1,5 @@
 import { Card, CardFooter } from "@/components/ui/card";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Globe, Linkedin, Mail } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -12,6 +12,7 @@ export type TeamMember = {
   quirkyTitle: string;
   image: string;
   links: {
+    website?: string;
     linkedin?: string;
     github?: string;
     email?: string;
@@ -44,6 +45,13 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ member }) => {
           {member.quirkyTitle}
         </span>
         <div className="flex space-x-2">
+          {member.links.website && (
+            <Button asChild variant="ghost" size="icon">
+              <Link href={member.links.website} target="_blank">
+                <Globe className="h-5 w-5" />
+              </Link>
+            </Button>
+          )}
           {member.links.linkedin && (
             <Button asChild variant="ghost" size="icon">
               <Link href={member.links.linkedin} target="_blank">
