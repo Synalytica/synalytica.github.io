@@ -10,7 +10,7 @@ export default function FloatingNodesBackground({
   maxNodeRadius = 6.0,
   nodeColor = null,
   linkColor = null,
-  backgroundColor = "transparent",
+  backgroundColor = null,
   speedMultiplier = 2.5,
   bounce = true,
 }) {
@@ -26,8 +26,32 @@ export default function FloatingNodesBackground({
     (theme === "system" &&
       typeof window !== "undefined" &&
       window.matchMedia("(prefers-color-scheme: dark)").matches);
-  const finalNodeColor =
-    nodeColor || (isDark ? "rgba(255,255,255,0.85)" : "rgba(0,0,0,0.85)");
+
+  // Theme-aware background color
+  const finalBackgroundColor =
+    backgroundColor !== null
+      ? backgroundColor
+      : isDark
+      ? "rgba(0,0,0,1)"
+      : "transparent";
+
+  // Color palette based on offering gradients
+  const colorPalette = [
+    // QuadCaffe: Green to Yellow
+    { center: "#1e8a5c", edge: "#ffde33" },
+    // Energylicious: Red to Blue
+    { center: "#cc2323", edge: "#1a5fb3" },
+    // FolioWiz: Dark Green to Light Green
+    { center: "#003300", edge: "#a6ff8a" },
+    // NIshtAI Labs: Gray to Teal
+    { center: "#6b7280", edge: "#14b8a6" },
+    // Additional combinations
+    { center: "#ffde33", edge: "#1e8a5c" },
+    { center: "#1a5fb3", edge: "#cc2323" },
+    { center: "#a6ff8a", edge: "#003300" },
+    { center: "#14b8a6", edge: "#6b7280" },
+  ];
+
   const finalLinkColor =
     linkColor || (isDark ? "rgba(255,255,255,0.25)" : "rgba(0,0,0,0.25)");
 
@@ -68,6 +92,10 @@ export default function FloatingNodesBackground({
           nodeRadius = rand(maxNodeRadius - 1.5, maxNodeRadius);
         }
 
+        // Assign gradient colors from palette
+        const colorIndex = Math.floor(Math.random() * colorPalette.length);
+        const colors = colorPalette[colorIndex];
+
         return {
           x: rand(0, sizeRef.current.w),
           y: rand(0, sizeRef.current.h),
@@ -77,6 +105,9 @@ export default function FloatingNodesBackground({
           // Add some nodes with different movement patterns
           movementType: Math.random() > 0.7 ? "chaotic" : "smooth",
           chaosFactor: Math.random() * 0.5 + 0.1,
+          // Gradient colors
+          centerColor: colors.center,
+          edgeColor: colors.edge,
         };
       });
     }
@@ -167,10 +198,11 @@ export default function FloatingNodesBackground({
 
     function draw() {
       const { w, h } = sizeRef.current;
+      const isDarkMode = isDark; // Capture current theme state
       ctx.clearRect(0, 0, w, h);
 
-      if (backgroundColor && backgroundColor !== "transparent") {
-        ctx.fillStyle = backgroundColor;
+      if (finalBackgroundColor && finalBackgroundColor !== "transparent") {
+        ctx.fillStyle = finalBackgroundColor;
         ctx.fillRect(0, 0, w, h);
       }
 
@@ -199,10 +231,16 @@ export default function FloatingNodesBackground({
         }
       }
 
-      // draw nodes on top
-      ctx.fillStyle = finalNodeColor;
+      // draw nodes on top with gradients
       for (let i = 0; i < nodes.length; i++) {
         const n = nodes[i];
+
+        // Create radial gradient for each node
+        const gradient = ctx.createRadialGradient(n.x, n.y, 0, n.x, n.y, n.r);
+        gradient.addColorStop(0, n.centerColor + (isDarkMode ? "80" : "CC")); // Center color with alpha
+        gradient.addColorStop(1, n.edgeColor + (isDarkMode ? "40" : "66")); // Edge color with alpha
+
+        ctx.fillStyle = gradient;
         ctx.beginPath();
         ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
         ctx.fill();
@@ -241,9 +279,8 @@ export default function FloatingNodesBackground({
     maxNodeRadius,
     speedMultiplier,
     bounce,
-    finalNodeColor,
     finalLinkColor,
-    backgroundColor,
+    finalBackgroundColor,
     theme,
   ]);
 

@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const teamMembers: TeamMember[] = [
   {
     name: "Mahesh S",
-    role: "Founder",
+    role: "Founder, CEO",
     quirkyTitle: "Visionary Vortex",
     image: "team/mahesh.png",
     links: {
@@ -17,7 +17,7 @@ const teamMembers: TeamMember[] = [
   },
   {
     name: "Pratik K",
-    role: "Founder",
+    role: "Founder, CTO",
     quirkyTitle: "Tech Shaman",
     image: "team/pratik.png",
     links: {

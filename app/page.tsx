@@ -12,7 +12,7 @@ const offerings: Offering[] = [
     tags: ["Education", "EdTech", "Collegiate"],
     description: "Personalized college fit. Human-first. AI-smart.",
     logo: "logos/quadcaffe.png",
-    url: "https://quadcaffe.synalytica.com",
+    url: "https://quadcaffe.com",
   },
   {
     id: 3,
@@ -90,15 +90,15 @@ export default function Home() {
   const heroText = `A "Startup Studio" catalyzing ideas using AI and big data to solve real-world shortcomings`;
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="flex flex-col">
       <motion.section
-        className="text-center my-12 mt-24"
+        className="text-center pt-24 pb-8 px-4 flex-shrink-0"
         initial="hidden"
         animate="visible"
         variants={heroVariants}
       >
         <h1
-          className="text-4xl md:text-6xl font-extrabold tracking-tight lg:text-7xl bg-gradient-to-r from-red-500 via-yellow-500 via-green-500 via-purple-500 to-black bg-clip-text text-transparent animated-gradient pb-4"
+          className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight bg-gradient-to-r from-red-500 via-yellow-500 via-green-500 via-purple-500 to-black bg-clip-text text-transparent animated-gradient leading-tight"
           style={{
             backgroundImage:
               "linear-gradient(215deg, rgba(238, 65, 72, 1) 12%, rgba(247, 151, 36, 1) 24%, rgba(248, 198, 79, 1) 36%, rgba(144, 192, 109, 1) 48%, rgba(59, 170, 138, 1) 60%, rgba(87, 120, 145, 1) 72%)",
@@ -109,18 +109,25 @@ export default function Home() {
       </motion.section>
 
       <motion.section
+        className="flex-1 flex items-center justify-center px-2 sm:px-4 lg:px-6 xl:px-8 pb-8"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {offerings
-            .sort((a, b) => a.id - b.id)
-            .map((offering) => (
-              <motion.div key={offering.id} variants={itemVariants}>
-                <OfferingCard offering={offering} />
-              </motion.div>
-            ))}
+        <div className="w-full">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 lg:gap-6 xl:gap-8 auto-rows-fr">
+            {offerings
+              .sort((a, b) => a.id - b.id)
+              .map((offering) => (
+                <motion.div
+                  key={offering.id}
+                  variants={itemVariants}
+                  className="h-full"
+                >
+                  <OfferingCard offering={offering} />
+                </motion.div>
+              ))}
+          </div>
         </div>
       </motion.section>
     </div>

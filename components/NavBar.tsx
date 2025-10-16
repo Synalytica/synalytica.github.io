@@ -61,7 +61,7 @@ const NavBar = () => {
               className="rounded-full"
             />
             <span className="font-bold text-sm [font-variant:small-caps]">
-              Synalytica
+              Synalytica&trade;
             </span>
           </Link>
           <nav className="flex items-center space-x-1">

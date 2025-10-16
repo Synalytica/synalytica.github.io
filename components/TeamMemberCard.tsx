@@ -25,7 +25,7 @@ interface TeamMemberCardProps {
 
 const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ member }) => {
   return (
-    <Card className="w-full max-w-sm rounded-2xl overflow-hidden transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl">
+    <Card className="w-full max-w-sm rounded-2xl overflow-hidden transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl bg-white/10 dark:bg-black/10 backdrop-blur-md border-white/20 dark:border-white/10 shadow-lg">
       <div className="relative">
         <Image
           src={getAssetPath(member.image)}
@@ -34,13 +34,13 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ member }) => {
           height={420}
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-        <div className="absolute bottom-0 left-0 p-4 text-white">
+        <div className="absolute inset-0 dark:bg-gradient-to-t dark:from-black/70 dark:to-transparent" />
+        <div className="absolute bottom-0 left-0 p-4 text-black dark:text-white">
           <h3 className="text-2xl font-bold">{member.name}</h3>
           <p className="text-sm uppercase tracking-wider">{member.role}</p>
         </div>
       </div>
-      <CardFooter className="flex justify-between items-center p-2 bg-background">
+      <CardFooter className="flex justify-between items-center p-2 bg-white/20 dark:bg-black/20 backdrop-blur-sm">
         <span className="text-sm font-semibold uppercase">
           {member.quirkyTitle}
         </span>
